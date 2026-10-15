@@ -84,7 +84,6 @@ O funcionário recebe um e-mail informando o resultado.
 03_Colaboradores.gs
 04_Notificacoes.gs
 05_Apresentacao.gs
-06_Utilitarios.gs
 07_Servicos.gs
 ```
 
@@ -169,10 +168,6 @@ Inclui:
 - conteúdo dos e-mails.
 
 A camada de apresentação não é responsável por acessar diretamente a planilha ou tomar decisões de negócio.
-
-### `06_Utilitarios.gs`
-
-Reúne funções auxiliares utilizadas em diferentes partes do projeto, como formatação de datas e montagem de links.
 
 ### `07_Servicos.gs`
 
@@ -321,34 +316,6 @@ A separação dessa parte do código permite trocar a origem dos dados posterior
 
 A ideia é que a aplicação possa utilizar outra planilha, arquivo ou sistema como fonte definitiva.
 
-## Estado atual
-
-**Release candidate — aguardando validação final de implantação.**
-
-A refatoração principal já foi feita, incluindo:
-
-- separação das responsabilidades;
-- representação dos pedidos como objetos;
-- separação da busca de colaboradores;
-- separação entre abertura do Web App e execução da decisão;
-- autenticação e autorização;
-- proteção contra concorrência;
-- redução de chamadas ao Sheets;
-- processamento dos colaboradores em memória;
-- índice `Map` para consultas por e-mail.
-
-## Pontos a validar antes da publicação
-
-- fonte definitiva de colaboradores;
-- implantação do Web App;
-- autenticação dos usuários;
-- autorização dos gestores;
-- aprovação;
-- reprovação;
-- processamento concorrente;
-- falhas durante o envio de e-mails;
-- histórico de execuções;
-- configuração de acesso do Web App.
 
 ## Limitações conhecidas
 
